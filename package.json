@@ -1,0 +1,8 @@
+{
+    "name":"hollywood",
+    "version":"0.0.1",
+    "dependencies":{
+        "walk":"*",
+        "hogan.js":"*"
+    }
+}
