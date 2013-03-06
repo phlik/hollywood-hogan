@@ -4,6 +4,6 @@
     "dependencies":{
         "walk":"*",
         "hogan.js":"*",
-        "vows":"*"
+        "mocha" : "*"
     }
 }
