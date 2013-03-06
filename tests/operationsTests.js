@@ -24,7 +24,21 @@ describe("operation ", function(){
         });
     });
 
+    it("createTemplateString should return a string that creates the template", function(done){
+        worker.createTemplateString(".", {name:"test.mustache"}, function(err, data){
+            var checkString = 'templates.["test"] = new Hogan.Template(function(c,p,i){var _=this;_.b(i=i||"");_.b("<strong>");_.b(_.v(_.f("test",c,p,0)));_.b("</strong>");return _.fl();;});';
+            assert.equal(err, null,"the error should be null");
+            assert.equal(data, checkString, "the check string should match the following: " + checkString);
+            done();
+        });
+    });
 
+    it("createTemplateString should return a string that creates the template", function(done){
+        worker.createTemplateString(".", {name:"test2.mustache"}, function(err, data){
+            assert.notEqual(err, null,"the error should not be null");
+            done();
+        });
+    });
 });
 
 
