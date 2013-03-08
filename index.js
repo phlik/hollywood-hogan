@@ -2,8 +2,9 @@
     var composer = require("./lib/composer.js");
 
     var ret = {
-        compileTemplates:function(options){
-
+        compileTemplates:function(options, callback){
+            compiler = composer.create(options);
+            compiler.compileTemplates(callback) ;
         }
     };
     module.exports = ret;
