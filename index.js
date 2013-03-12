@@ -3,7 +3,7 @@
 
     var ret = {
         compileTemplates:function(options, callback){
-            compiler = composer.create(options);
+            var compiler = composer.create(options);
             compiler.compileTemplates(callback) ;
         }
     };

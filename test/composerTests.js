@@ -17,7 +17,6 @@ describe("operation ", function(){
         it("should compile a set of functions based on the data in the test folder", function(done){
             worker.compileTemplates(function(err, data){
                 assert.equal(data.length > 0, true);
-                console.log(data);
                 done();
             });
         });
